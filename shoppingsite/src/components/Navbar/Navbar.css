@@ -1,0 +1,102 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 149px 25px 148px;
+    width: 100%;
+}
+
+.search_container {
+    display: flex;
+    align-items: center;
+}
+
+.search_container input {
+    display: flex;
+    width: 455px;
+    height: 60px;
+    padding: 12px 20px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px 0px 0px 8px;
+    background: var(--Boulder-100, #E7E7E7);
+    border: none;
+    color: var(--Boulder-200, #D1D1D1);
+}
+
+.search_container input::placeholder {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+
+.search_container button {
+    display: flex;
+    width: 130px;
+    height: 60px;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 0px 8px 8px 0px;
+    background: var(--Boulder-950, #262626);
+    border: none;
+    color: var(--text-icon-primary-white, #FFF);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 100% */
+    letter-spacing: 0.32px;
+    text-transform: capitalize;
+}
+
+.cart_container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cart_icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    background: var(--Boulder-200, #D1D1D1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.badges {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    min-width: 16px;
+    max-width: 34px;
+    padding: 0px 4px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: var(--Black-600, #5D5D5D);
+    color: var(--Schemes-On-Error, #FFF);
+    text-align: center;
+    font-size: var(--Label-Small-Size, 11px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--Label-Small-Line-Height, 16px);
+    letter-spacing: var(--Label-Small-Tracking, 0.5px);
+    position: absolute;
+    right: 12.5rem;
+    top: 1.2rem;
+}
+
+.cart_desc p {
+    color: var(--Fiord-950, #1F2632);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
