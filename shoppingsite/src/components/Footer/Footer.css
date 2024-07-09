@@ -1,0 +1,124 @@
+.footer_container {
+    display: flex;
+    width: 100%;
+    padding: 64px 64px;
+    justify-content: center;
+    gap: 131px;
+    background: var(--Boulder-950, #262626);
+}
+
+.social_media_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+.icon_style {
+    scale: 2;
+    color: #fff;
+}
+
+.features_link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.features_link h1 {
+    color: var(--white, #FFF);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.features_link a {
+    color: var(--white, #FFF);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.join_newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+}
+
+.join_newsletter h1 {
+    color: var(--white, #FFF);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.join_newsletter p {
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    opacity: 0.5;
+}
+
+.join_newsletter p::before {
+    content: '• ';
+    color: black;
+    margin-right: 0.5em;
+    opacity: 0.5;
+    color: var(--white, #FFF);
+}
+
+.input_field {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.input_field button {
+    display: flex;
+    width: 108px;
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: none;
+    color: var(--White, #FFF);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+    cursor: pointer;
+    background: var(--Boulder-600, #5D5D5D);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+}
+
+.enter_email {
+    display: flex;
+    width: 500px;
+    padding: 20px 30px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: none;
+    background: var(--Light-grey, #F7F7F7);
+}
+
+.enter_email::placeholder {
+    color: var(--Dark-grey, #B5B6BA);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
