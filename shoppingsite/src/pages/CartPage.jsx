@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import "../components/CartPage/CartPage.css"
 
 const CartPage = () => {
+
+    const [activeSection, setActiveSection] = useState(null);
+
+    const sections = {
+        description: "Looking to spice up your kitchen game? Say hello to our Blue Cookware Set! This all-in-one, stackable set comes with a resistant lid and ergonomic handles that make cooking a breeze. And guess what? It's non-stick, so you can kiss those stubborn food residues goodbye. Perfect for whipping up your favorite dishes, this set combines style and functionality in one size that fits all your cooking needs. Upgrade your kitchen today with the Blue Cookware Set!",
+        reviews: [
+            "1. This cookware set is a game-changer! Love the non-stick feature. Highly recommend! - Alex R.",
+            "2. Stylish and functional. The stackable design is a lifesaver for my small kitchen! - Jamie L.",
+            "3. Cooking has never been easier. The handles are comfy, and cleanup is a snap. - Casey M.",
+            "4. Absolutely love the blue color! It's a great addition to my kitchen. - Taylor S.",
+            "5. Fantastic set! Durable, easy to use, and looks great. Couldn't be happier. - Morgan P."
+        ].join('\n\n'),
+        additionalInfo: "Material: High-quality aluminum for even heat distribution\n\nColor: Elegant blue that adds a pop of color to your kitchen\n\nCompatibility: Suitable for all stovetops, including induction\n\nDishwasher Safe: Yes, for easy cleaning\n\nSet Includes: 1 saucepan, 1 frying pan, 1 stockpot, and 1 lid\n\nWarranty: 2-year warranty for peace of mind"
+    };
+
+    const handleClick = (section) => {
+        setActiveSection(prevSection => prevSection === section ? null : section);
+    };
+
   return (
     <div>
         <div>
@@ -53,8 +72,24 @@ const CartPage = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className='other_desc_wrapper'>
+                    <div className='other_desc'>
+                        <div className={`desc_header ${activeSection === 'description' ? 'active' : ''}`} onClick={() => handleClick('description')}>
+                            <h1>Description</h1>
+                        </div>
+                        <div className={`desc_header ${activeSection === 'reviews' ? 'active' : ''}`} onClick={() => handleClick('reviews')}>
+                            <h1>Customer’s Review</h1>
+                        </div>
+                        <div className={`desc_header ${activeSection === 'additionalInfo' ? 'active' : ''}`} onClick={() => handleClick('additionalInfo')}>
+                            <h1>Additional Information</h1>
+                        </div>
+                    </div>
+                    <div className='section_text_wrapper'>
+                        <p>{activeSection && sections[activeSection]}</p>
+                    </div>
+                </div>
             </div>
-            
             <Footer />
         </div>
     </div>
